@@ -1,20 +1,23 @@
 import Image from 'next/image'
-import styles from './page.module.css'
-// import Head from 'next/head'
-import { Navbar } from './components/navbar'
+import styles from '../page.module.css'
+import Head from 'next/head'
 import Link from 'next/link'
+import { Navbar } from '../components/navbar'
 
-export default function Home() {
+export default function ContactPage()  {
   return (
-    <>
-    
-    <Navbar/>
-    <main className={styles.main}>
+    <div>
+          <Head>
+        <title>Contact page</title>
+      </Head>
 
+      <Navbar />
+
+    <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editin  palomo&nbsp;
-          <code className={styles.code}>src/app/home.tsx</code>
+           palomo esto es Contact &nbsp;
+          <code className={styles.code}>src/app/contact.tsx</code>
         </p>
         <div>
           <a
@@ -23,6 +26,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By{' '}
+
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -31,6 +35,7 @@ export default function Home() {
               height={24}
               priority
             />
+        
           </a>
         </div>
       </div>
@@ -46,23 +51,22 @@ export default function Home() {
         />
       </div>
 
+
       <div className={styles.grid}>
         <Link
-          href="/about"
+          href="/pricing"
           className={styles.card}
         
         >
           <h2>
-            Vamos para about cñ <span>-&gt;</span>
+            Ir a la pagina principal <span>-&gt;</span>
           </h2>
-          <p>Deja la palomada y entra</p>
+          <p>dale para alla</p>
         </Link>
 
 
       </div>
     </main>
-
-
-    </>
+    </div>
   )
 }
